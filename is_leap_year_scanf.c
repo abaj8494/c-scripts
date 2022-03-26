@@ -1,9 +1,10 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-int main(int argc, char *argv[]) {
-	int year = atoi(argv[1]);
+int main() {
+	int year;
 	int leap;
+	printf("Enter year: ");
+	scanf("%d", &year);
 	if ((year % 4) != 0)
 		leap = 0;
 	else if ((year % 100) != 0)
