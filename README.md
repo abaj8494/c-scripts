@@ -10,7 +10,7 @@
 	- for a novice, I recommend `cc` as that will default to the system C compiler
 - here is a screenshot of the process:
 
-![spiral compilation](spiral_compilation.png)
+![spiral compilation](spiral-compilation.png)
 
 
 # Descriptions
@@ -25,7 +25,7 @@
 
 ## Caesar
 
-- obscures text with the [caesar cipher](link)
+- obscures text with the [caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher)
 
 ## Calculator
 
@@ -55,7 +55,7 @@
 
 ## Easter
 
-- finds the date of Easter on a particular year. a script that can fit very nicely within [alfred](link)
+- finds the date of Easter on a particular year. a script that can fit very nicely within [alfred]()
 
 ## Hello World!
 
@@ -84,7 +84,7 @@
 
 ## Perfect
 
-- checks whether a given number is a [perfect number](link)
+- checks whether a given number is a [perfect number](https://en.wikipedia.org/wiki/Perfect_number)
 
 ## Postfix calculator
 
