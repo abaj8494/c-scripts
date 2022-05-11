@@ -55,7 +55,7 @@
 
 ## Easter
 
-- finds the date of Easter on a particular year. a script that can fit very nicely within [alfred]()
+- finds the date of Easter on a particular year. a script that can fit very nicely within [alfred](https://github.com/br1ttle/alfred-workflows)
 
 ## Hello World!
 
@@ -67,7 +67,7 @@
 
 ## Is leap year (s)
 
-- checks if a particular year is a leap year. also great for [alfred integration]()
+- checks if a particular year is a leap year. also great for [alfred integration](https://github.com/br1ttle/alfred-workflows)
 
 ## Linked list
 
