@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
         int16_t value = l;
 
         char *bits = sixteen_out(value);
-        printf("%s\n", bits);
+		printf("<items><item uid=\"%s\" arg=\"%s\"><title>%s</title><subtitle></subtitle><icon>icon.png</icon></item></items>", bits, bits, bits);
 
         free(bits);
     }
