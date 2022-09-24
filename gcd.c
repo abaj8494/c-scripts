@@ -23,11 +23,11 @@ int main(int argc, char *argv[]) {
     int a = atoi(argv[1]), b = atoi(argv[2]), 
         q = q_func(a, b), r = r_func(a, b, q);
 
-    while (r_func(a, b, q)) {
-        if (!r) break;
+    while (r) {
         a = b;
         b = r;
         q = q_func(a, b);
+        if (!(r = r_func(a, b, q))) break;
     }
 
     printf("b is: %d", b);
