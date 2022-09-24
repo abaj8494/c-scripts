@@ -29,5 +29,7 @@ int main(int argc, char argv[]*) {
         b = r;
         q = q(a, b);
     }
+
+    printf("b is: %d", b);
     return 0;
 }
