@@ -14,7 +14,7 @@ int r(int a, int b, int q) {
     return q * b - a;
 }
 
-int main(int argc, char argv[]*) {
+int main(int argc, char *argv[]) {
     if (argc != 3) {
         fprintf(stderr, "Usage: %s <integer 1> <integer 2>\n", argv[0]);
         return 1;
