@@ -28,6 +28,7 @@ int main(int argc, char *argv[]) {
     }
     while ((r = r_func(a, b, q)));
 
-    printf("the GCD is %d\n", b);
+    printf("%d = %d * %d + %d\n", a, q, b, r);
+    printf("Hence the GCD is %d\n", b);
     return 0;
 }
