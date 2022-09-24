@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
 
     int q = q_func(a, b);
     
-    while (!r(a, b, q)) {
+    while (!int r = r_func(a, b, q)) {
         a = b;
         b = r;
         q = q_func(a, b);
