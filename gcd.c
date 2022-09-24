@@ -23,7 +23,12 @@ int main(int argc, char argv[]*) {
     int a = atoi(argv[1]), b = atoi(argv[2]);
 
     int q = q(a, b);
-    if r()
+    
+    while (r(a, b)) {
+        a = b;
+        b = r;
+
+    }
     
     
 
