@@ -11,7 +11,7 @@ int q_func(int a, int b) {
 }
 
 int r_func(int a, int b, int q) {
-    return q * b - a;
+    return (q * b) - a;
 }
 
 int main(int argc, char *argv[]) {
