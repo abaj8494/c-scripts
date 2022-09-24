@@ -23,8 +23,6 @@ int main(int argc, char *argv[]) {
     int a = atoi(argv[1]), b = atoi(argv[2]), 
         q = q_func(a, b), r = r_func(a, b, q);
 
-    printf("values: a%d, b%d, q%d, r%d\n", a,b,q,r);
-    return 0;
     while (r) {
         a = b;
         b = r;
@@ -32,6 +30,6 @@ int main(int argc, char *argv[]) {
         if (!(r = r_func(a, b, q))) break;
     }
 
-    printf("b is: %d", b);
+    printf("the GCD is %d\n", b);
     return 0;
 }
