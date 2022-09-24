@@ -23,12 +23,12 @@ int main(int argc, char *argv[]) {
     int a = atoi(argv[1]), b = atoi(argv[2]), 
         q = q_func(a, b), r = r_func(a, b, q);
 
-    while (r) {
+    do {
         a = b;
         b = r;
         q = q_func(a, b);
-        if (!(r = r_func(a, b, q))) break;
     }
+    while ((r = r_func(a, b, q)));
 
     printf("the GCD is %d\n", b);
     return 0;
