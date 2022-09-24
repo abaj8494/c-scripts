@@ -24,17 +24,10 @@ int main(int argc, char argv[]*) {
 
     int q = q(a, b);
     
-    while (r(a, b)) {
+    while (!r(a, b, q)) {
         a = b;
         b = r;
-
+        q = q(a, b);
     }
-    
-    
-
-
-        
-    }
-
     return 0;
 }
