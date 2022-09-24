@@ -6,11 +6,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int q(int a, int b) {
+int q_func(int a, int b) {
     return a % b;
 }
 
-int r(int a, int b, int q) {
+int r_func(int a, int b, int q) {
     return q * b - a;
 }
 
@@ -22,12 +22,12 @@ int main(int argc, char *argv[]) {
 
     int a = atoi(argv[1]), b = atoi(argv[2]);
 
-    int q = q(a, b);
+    int q = q_func(a, b);
     
     while (!r(a, b, q)) {
         a = b;
         b = r;
-        q = q(a, b);
+        q = q_func(a, b);
     }
 
     printf("b is: %d", b);
