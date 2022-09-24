@@ -20,11 +20,11 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    int a = atoi(argv[1]), b = atoi(argv[2]);
+    int a = atoi(argv[1]), b = atoi(argv[2]), 
+        q = q_func(a, b), r = r_func(a, b, q);
 
-    int q = q_func(a, b);
-    
-    while (!int r = r_func(a, b, q)) {
+    while (r_func(a, b, q)) {
+        if (!r) break;
         a = b;
         b = r;
         q = q_func(a, b);
