@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int fib(int f) {
-    if (f == 1) return 1;
+    if (f == 1 || f == 0) return 1;
     else return (fib(f - 1) + fib(f - 2));
 }
 
