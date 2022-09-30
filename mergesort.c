@@ -3,7 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int *mergesort(int *sort)
+int *mergesort(int *sort) {
+    return sort;
+}
 
 int main(int argc, char **argv) {
     // error checking
@@ -17,6 +19,7 @@ int main(int argc, char **argv) {
         sort[i] = atoi(argv[j]);
     }
 
+    mergesort(&sort);
     
     return 0;
 }
