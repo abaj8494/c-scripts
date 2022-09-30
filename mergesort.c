@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int *mergesort(int *sort)
+
 int main(int argc, char **argv) {
     // error checking
     if (argc < 2) {
@@ -10,12 +12,11 @@ int main(int argc, char **argv) {
         return 1;
     }
     // copy into int array
-    int to_sort[argc - 1];
+    int sort[argc - 1];
     for (int i = 0, j = 1; i < argc - 1; i++, j++) {
-        to_sort[i] = atoi(argv[j]);
-        printf("to_sort[i] = %d\n", to_sort[i]);
+        sort[i] = atoi(argv[j]);
     }
 
-
+    
     return 0;
 }
