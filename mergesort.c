@@ -43,7 +43,11 @@ void msort(int *a, int p, int r) {
         int q = (p + r) / 2;
         msort(a, p, q);
         msort(a, q + 1, r);
-        merge(a, p, q, r);
+        int *b = merge(a, p, q, r);
+    }
+    // printing
+    for (int i = 0; i < r; i++) {
+        printf("%d\n", b[i]);
     }
 }
 
