@@ -3,10 +3,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int *b = malloc(sizeof(int) * r);
 
 int *merge(int *a, int l, int m, int r) {
     int i, j, k;
+    int *b = malloc(sizeof(int) * r);
     for (i = m+1; i > l; i--)
         b[i-1] = a[i-1];
     for (j = m; j < r; j++)
@@ -19,14 +19,14 @@ int *merge(int *a, int l, int m, int r) {
     return b;
 }
 
-void msort(int *a, int p, int r) {
+int *msort(int *a, int p, int r) {
     // p is the start index, q is the middle, r is the end.
     // this convention makes sense if you think of the alphabet!
     if (p < r) {
         int q = (p + r) / 2;
         msort(a, p, q);
         msort(a, q + 1, r);
-        merge(a, p, q, r);
+        return merge(a, p, q, r);
     }
 }
 
@@ -42,7 +42,7 @@ int main(int argc, char **argv) {
         a[i] = atoi(argv[j]);
     }
 
-    msort(a, 0, argc - 1);
+    int *b = msort(a, 0, argc - 1);
     for (int i = 0; i < r; i++) {
         printf("%d\n", b[i]);
     }
