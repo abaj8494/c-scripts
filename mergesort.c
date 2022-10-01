@@ -3,37 +3,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int *merge(int *a, int p, int q, int r) {
-    int i = p, j = q + 1, k = p;
+int *merge(int *a, int l, int m, int r) {
     int *b = malloc(sizeof(int) * r);
-    while (i < q + 1 && j < r + 1) {
-        if (a[i] <= a[j]) {
-            b[k] = a[i];
-            i++;
-            k++;
-            if (i == q + 1) {
-                for (int m = j; m < r; m++) {
-                    b[k-j+m] = a[m];
-                }
-            }
-            else {
-                b[k] = a[j];
-                j++;
-                k++;
-                if (j == r + 1) {
-                    for (int m = i; m < q; m++) {
-                        b[k-i+m] = a[m];
-                    }
-                }
-            }
-            for (int n = p; n < r; n++) {
-                a[n] = b[n];
-            }
-
-        }
-    }
+    int i, j, k;
+    for (i = m+1; i > l; i--)
+        b[i-1] = a[i-1];
+    for (j = m; j < r; j++)
+        b[r+m-j] = a[j+1];
+    for (k = l; k <= r; k++)
+        if (b[j] < b[i])
+            a[k] = b[j--];
+        else
+            a[k] = b[i++];
     return b;
-    
 }
 
 void msort(int *a, int p, int r) {
