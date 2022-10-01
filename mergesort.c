@@ -43,7 +43,7 @@ int main(int argc, char **argv) {
     }
 
     int *b = msort(a, 0, argc - 1);
-    for (int i = 0; i < r; i++) {
+    for (int i = 0; i < argc - 1; i++) {
         printf("%d\n", b[i]);
     }
     
