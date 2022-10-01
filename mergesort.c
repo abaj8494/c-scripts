@@ -4,7 +4,8 @@
 #include <stdlib.h>
 
 int *merge(int *a, int p, int q, int r) {
-    int i = p, j = q + 1, k = p, b[r];
+    int i = p, j = q + 1, k = p;
+    int b = malloc(sizeof(int) * r);
     while (i < q + 1 && j < r + 1) {
         if (a[i] <= a[j]) {
             b[k] = a[i];
@@ -26,7 +27,7 @@ int *merge(int *a, int p, int q, int r) {
                 }
             }
             for (int n = p; n < r; n++) {
-                a[n] = b[n]
+                a[n] = b[n];
             }
 
         }
