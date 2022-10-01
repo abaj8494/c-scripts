@@ -3,17 +3,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define key(A) (A)
-#define less(A, B) (key(A) < key(B))
-
 int *merge(int *a, int l, int m, int r) {
     int i, j, k;
     int *b = malloc(sizeof(int) * r);
     for (int i = m + 1; i > l; i--) b[i - 1] = a[i - 1];
     for (int j = m; j < r; j++) b[r + m - j] = a[j + 1];
     for (int k = l; k <= r; k++) {
-        if (less(b[j], b[i]))
-          a[k] = b[j--];
+        if (b[j] < b[i]) a[k] = b[j--];
         else a[k] = b[i++];
     }
     return b;
@@ -27,6 +23,7 @@ int *msort(int *a, int l, int r) {
         msort(a, m + 1, r);
         return merge(a, l, m, r);
     }
+    return NULL;
 }
 
 int main(int argc, char **argv) {
