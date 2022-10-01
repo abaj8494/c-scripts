@@ -18,7 +18,6 @@ void merge(int *a, int l, int m, int r) {
 
 void msort(int *a, int l, int r) {
     // l is the left index, m is the middle, r is the right.
-    printf("r: %d\n", r);
     int m = (l + r) / 2;
     if (l < r) {
         msort(a, l, m);
@@ -40,7 +39,9 @@ int main(int argc, char **argv) {
     }
 
     b = malloc(sizeof(int) * argc - 1);
+
     msort(a, 0, argc - 2);
+
     for (int i = 0; i < argc - 1; i++) {
         printf("%d\n", b[i]);
     }
