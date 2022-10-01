@@ -39,7 +39,7 @@ int main(int argc, char **argv) {
     }
 
     b = malloc(sizeof(int) * argc);
-    msort(a, 0, argc - 1);
+    msort(a, 0, argc - 2);
     for (int i = 0; i < argc - 1; i++) {
         printf("%d\n", b[i]);
     }
