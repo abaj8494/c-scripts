@@ -36,15 +36,18 @@ int *merge(int *a, int p, int q, int r) {
     
 }
 
-void msort(int *a, int l, int r) {
+void msort(int *a, int p, int r) {
     // p is the start index, q is the middle, r is the end.
     // this convention makes sense if you think of the alphabet!
-    int m = (r+l)/2;
-
-    if (r <= l) return;
-    msort(a, l, m);
-    msort(a, m+1, r);
-    merge(a, l, m, r);
+    if (p < r) {
+        int q = (p + r) / 2;
+        msort(a, p, q);
+        msort(a, q + 1, r);
+        int *b = merge(a, p, q, r);
+        for (int i = 0; i < r; i++) {
+            printf("%d\n", b[i]);
+        }
+    }
 }
 
 int main(int argc, char **argv) {
