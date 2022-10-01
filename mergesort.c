@@ -21,6 +21,7 @@ void msort(int *a, int l, int r) {
     if (l < r) {
         msort(a, l, m);
         msort(a, m + 1, r);
+        return;
         merge(a, l, m, r);
     }
 }
@@ -39,6 +40,9 @@ int main(int argc, char **argv) {
 
     b = malloc(sizeof(int) * argc);
     msort(a, 0, argc - 1);
+    for (int i = 0; i < argc - 1; i++) {
+        printf("%d\n", b[i]);
+    }
     
     return 0;
 }
