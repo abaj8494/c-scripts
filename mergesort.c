@@ -19,14 +19,14 @@ int *merge(int *a, int l, int m, int r) {
     return b;
 }
 
-int *msort(int *a, int p, int r) {
+int *msort(int *a, int l, int r) {
     // p is the start index, q is the middle, r is the end.
     // this convention makes sense if you think of the alphabet!
-    if (p < r) {
-        int q = (p + r) / 2;
-        msort(a, p, q);
-        msort(a, q + 1, r);
-        return merge(a, p, q, r);
+    int m = (l + r) / 2;
+    if (l < r) {
+        msort(a, l, m);
+        msort(a, m + 1, r);
+        return merge(a, l, m, r);
     }
 }
 
