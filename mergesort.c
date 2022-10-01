@@ -5,7 +5,7 @@
 
 int *merge(int *a, int p, int q, int r) {
     int i = p, j = q + 1, k = p;
-    int b = malloc(sizeof(int) * r);
+    int *b = malloc(sizeof(int) * r);
     while (i < q + 1 && j < r + 1) {
         if (a[i] <= a[j]) {
             b[k] = a[i];
