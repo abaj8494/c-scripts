@@ -39,8 +39,10 @@ int *merge(int *a, int p, int q, int r) {
 void msort(int *a, int p, int r) {
     // p is the start index, q is the middle, r is the end.
     // this convention makes sense if you think of the alphabet!
+    int q = (p + r) / 2;
+
     if (p < r) {
-        int q = (p + r) / 2;
+        int q = (p + q) / 2;
         msort(a, p, q);
         msort(a, q + 1, r);
         int *b = merge(a, p, q, r);
