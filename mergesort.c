@@ -20,8 +20,7 @@ int *merge(int *a, int l, int m, int r) {
 }
 
 int *msort(int *a, int l, int r) {
-    // p is the start index, q is the middle, r is the end.
-    // this convention makes sense if you think of the alphabet!
+    // l is the left index, m is the middle, r is the right.
     int m = (l + r) / 2;
     if (l < r) {
         msort(a, l, m);
