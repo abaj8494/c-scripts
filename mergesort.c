@@ -37,11 +37,8 @@ int main(int argc, char **argv) {
         a[i] = atoi(argv[j]);
     }
 
-    b = malloc(sizeof(int) * r);
+    b = malloc(sizeof(int) * argc);
     msort(a, 0, argc - 1);
-    for (int i = 0; i < argc - 1; i++) {
-        printf("%d\n", b[i]);
-    }
     
     return 0;
 }
