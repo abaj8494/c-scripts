@@ -3,8 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int *b = malloc(sizeof(int) * r);
+
 int *merge(int *a, int l, int m, int r) {
-    int *b = malloc(sizeof(int) * r);
     int i, j, k;
     for (i = m+1; i > l; i--)
         b[i-1] = a[i-1];
@@ -25,10 +26,7 @@ void msort(int *a, int p, int r) {
         int q = (p + r) / 2;
         msort(a, p, q);
         msort(a, q + 1, r);
-        int *b = merge(a, p, q, r);
-        for (int i = 0; i < r; i++) {
-            printf("%d\n", b[i]);
-        }
+        merge(a, p, q, r);
     }
 }
 
@@ -45,6 +43,9 @@ int main(int argc, char **argv) {
     }
 
     msort(a, 0, argc - 1);
+    for (int i = 0; i < r; i++) {
+        printf("%d\n", b[i]);
+    }
     
     return 0;
 }
