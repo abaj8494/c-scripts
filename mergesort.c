@@ -36,8 +36,8 @@ void merge(int *a, int l, int m, int r) {
 
 void msort(int *a, int l, int r) {
     // l is the left index, m is the middle, r is the right.
-    int m = (l + r) / 2;
     if (l < r) {
+        int m = (l + r) / 2;
         msort(a, l, m);
         msort(a, m + 1, r);
         merge(a, l, m, r);
