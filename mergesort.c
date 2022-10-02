@@ -10,10 +10,8 @@ void merge(int a[], int l, int m, int r)
     int n1 = m - l + 1;
     int n2 = r - m;
  
-    /* create temp aays */
     int L[n1], R[n2];
  
-    /* Copy data to temp aays L[] and R[] */
     for (i = 0; i < n1; i++)
         L[i] = a[l + i];
     for (j = 0; j < n2; j++)
