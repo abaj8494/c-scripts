@@ -12,13 +12,13 @@ void merge(int *a, int l, int m, int r) {
     while (i <= m && j <= r) {
         if (a[i] <= a[j]) {
             b[k++] = a[i++];
-            if (i == m + 1) {
+            if (i == m) {
                 for (int n = j; n < r; n++) {b[k-j+n] = a[n];}
             }
         }
         else {
             b[k++] = a[j++];
-            if (j == r + 1) {
+            if (j == r) {
                 for (int n = i; n < m; n++) {
                     b[k - i + n] = a[n];
                 }
