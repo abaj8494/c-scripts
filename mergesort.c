@@ -19,7 +19,7 @@ void merge(int *a, int l, int m, int r) {
                 printf("in loop1\nvalues of i, j, k -> %d, %d, %d\n", i, j, k);
                 for (int n = j; n < r; n++) { 
                     b[k - j + n] = a[n]; 
-                    printf("k-i+n : %d\n", k-i+n);
+                    printf("k-i+n : %d\n", k-j+n);
                 }
             }
         }
