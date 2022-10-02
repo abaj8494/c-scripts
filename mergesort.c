@@ -4,19 +4,30 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int *b;
-
 void merge(int *a, int l, int m, int r) {
     int *b = malloc(sizeof(int) * (r - l));
 
+        for (int p = l; p < r; p++) {
+            printf("%d\n", a[p]);
+            printf("%d\n", b[p]);
+        }
     printf("r:%d",r);
     int i = l, j = m + 1, k = r;
     while (i <= m && j <= r) {
         if (a[i] <= a[j]) {
             b[k++] = a[i++];
+            if (i == m + 1) {
+                for (int p = j; p < r; p++) {b[k-j+p] = a[p];}
+            }
         }
         else {
             b[k++] = a[j++];
+            if (j == r + 1) {
+                for (int p = i; p < m; p++) {
+                    b[k - i + p] = a[p];
+                }
+            }
+
         }
         for (int p = l; p < r; p++) {
             a[p] = b[p];
@@ -28,9 +39,6 @@ void merge(int *a, int l, int m, int r) {
 
 
 void msort(int *a, int l, int r) {
-        for (int p = l; p < r; p++) {
-            printf("%d\n", a[p]);
-        }
     // l is the left index, m is the middle, r is the right.
     int m = (l + r) / 2;
     if (l < r) {
