@@ -5,8 +5,8 @@
 
 int gcd(int a, int b) {
     int r = a % b;
-    printf("r %d\n",r);
     int q = (a - r) / b;
+    printf("r b %d %d\n",r, b);
     if (r) gcd(b, r);
     return b;
 }
