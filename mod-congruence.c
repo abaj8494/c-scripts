@@ -10,9 +10,13 @@ int main(int argc, char **argv) {
         fprintf(stderr, "Usage: %s a b c\n", argv[0]);
         return  1;
     }
-    int a = atoi(argv[1]), b = atoi(argv[2]), c = atoi(argv[3]); 
-    int d = gcd(a, b);
+    int a = atoi(argv[1]), b = atoi(argv[2]), c = atoi(argv[3]), x, y; 
+    int d = gcd(a, b, &x, &y);
 
-    printf("gcd is %d %d\n", d, c);
+    // ax equiv b (mod) c => ax + by = c
+    printf("c is %d\n",c);
+    if (!(d % b)) printf("no solutions\n");
+    printf("gcd: d x y %d %d %d\n", d, x, y);
+    return 0;
     
 }
