@@ -7,15 +7,32 @@
 int *b;
 
 void merge(int *a, int l, int m, int r) {
-    int i, j, k;
-    for (i = m+1; i > l; i--)
-        b[i-1] = a[i-1];
-    for (j = m; j < r; j++)
-        b[r+m-j] = a[j+1];
-    for (k = l; k <= r; k++)
-        if (b[j] < b[i]) a[k] = b[j--];
-        else a[k] = b[i++];
+    int *b = malloc(sizeof(int) * (r - l));
+
+    int i = l; j = m + 1; k = r;
+    while (i < m + 1 && j < r + 1) {
+        if (a[i] <= a[j]) {
+            b[k++] = a[i++];
+            if (i = m + 1) {
+                for (int p = j; p < r; p++) {b[k-j+p] = a[p];}
+            }
+        }
+        else {
+            b[k++] = a[j++];
+            if (j = r + 1) {
+                for (int p = i; p < m; p++) {
+                    b[k - i + p] = a[p];
+                }
+            }
+
+        }
+        for (int p = l; p < r; p++) {
+            a[n] = b[n]
+        }
+    }
+    free(b);
 }
+
 
 void msort(int *a, int l, int r) {
     // l is the left index, m is the middle, r is the right.
