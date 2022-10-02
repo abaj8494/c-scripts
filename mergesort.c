@@ -9,16 +9,16 @@ void merge(int *a, int l, int m, int r) {
 
     printf("l -> %d\nm -> %d\nr -> %d\n", l, m, r);
     int i = l, j = m + 1, k = l;
-    while (i <= m && j <= r) {
+    while (i < m + 1 && j < r + 1) {
         if (a[i] <= a[j]) {
             b[k++] = a[i++];
-            if (i == m) {
+            if (i == m + 1) {
                 for (int n = j; n < r; n++) {b[k-j+n] = a[n];}
             }
         }
         else {
             b[k++] = a[j++];
-            if (j == r) {
+            if (j == r + 1) {
                 for (int n = i; n < m; n++) {
                     b[k - i + n] = a[n];
                 }
