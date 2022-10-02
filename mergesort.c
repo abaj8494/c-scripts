@@ -6,12 +6,11 @@
 
 #define key(A) (A)
 #define less(A, B) (key(A) < key(B))
-typedef int Item;
 
-int *aux;
 
 void merge(int a[], int l, int m, int r)
 {
+    int aux[8];
     printf("r:%d\n",r);
   int i, j, k;
 
@@ -24,6 +23,7 @@ void merge(int a[], int l, int m, int r)
       a[k] = aux[j--];
     else
       a[k] = aux[i++];
+  for (int i = 0; i < 8; i++) {a[i] = aux[i];}
 }
 
 
