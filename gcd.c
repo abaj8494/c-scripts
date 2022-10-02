@@ -7,6 +7,6 @@ int gcd(int a, int b) {
     int r = a % b;
     int q = (a - r) / b;
     printf("a b r %d %d %d\n",a, b, r);
-    if (r) gcd(b, r);
-    return b;
+    if (r != 0) return b;
+    gcd(b, r);
 }
