@@ -5,6 +5,6 @@
 int gcd(int a, int b) {
     do {
 
-    } 
+    } while ()
     return c;
 }

@@ -6,18 +6,21 @@
 
 void merge(int a[], int l, int m, int r)
 {
+    // initialise indices
     int i, j, k;
     int n1 = m - l + 1;
     int n2 = r - m;
  
+    // initialise subarrays
     int L[n1], R[n2];
  
+    // copy into subarrays
     for (i = 0; i < n1; i++)
         L[i] = a[l + i];
     for (j = 0; j < n2; j++)
         R[j] = a[m + 1 + j];
  
-    /* Merge the temp aays back into a[l..r]*/
+    // merge temp arrays into 
     i = 0; // Initial index of first subaay
     j = 0; // Initial index of second subaay
     k = l; // Initial index of merged subaay
