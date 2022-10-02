@@ -4,44 +4,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void merge(int *a, int l, int m, int r) {
-    int *b = malloc(sizeof(int) * (r - l));
+#define key(A) (A)
+#define less(A, B) (key(A) < key(B))
+typedef int Item;
 
-    printf("\n\nnew@@@@@@@@@@@@@@@@@@@@@@@@@\n\n");
-    printf("the array a is: [%d,%d,%d,%d,%d,%d,%d,%d]\n", a[0],a[1],a[2],a[3],a[4],a[5],a[6],a[7]);
-    printf("l -> %d\nm -> %d\nr -> %d\n", l, m, r);
-    int i = l, j = m + 1, k = l;
-    while (i < m + 1 && j < r + 1) {
-        if (a[i] <= a[j]) {
-            b[k++] = a[i++];
-            // if about to exit, copy the rest of the array into b
-            if (i == m + 1) {
-                printf("in loop1\nvalues of i, j, k -> %d, %d, %d\n", i, j, k);
-                for (int n = j; n < r; n++) { 
-                    b[k - j + n] = a[n]; 
-                    printf("k-i+n : %d\n", k-j+n);
-                }
-            }
-        }
-        else {
-            b[k++] = a[j++];
-            // if about to exit, copy the rest of the array into b
-            if (j == r + 1) {
-                printf("in loop2\nvalues of i, j, k -> %d, %d, %d\n", i, j, k);
-                for (int n = i; n < m; n++) { 
-                    b[k - i + n] = a[n]; 
-                    printf("k-i+n : %d\n", k-i+n);
-                }
-            }
+int *aux;
 
-        }
-        for (int n = l; n < r; n++) {
-            a[n] = b[n];
-            printf("%d", a[n]);
-        }
-    }
-    printf("\n");
-    printf("the array a changed: [%d,%d,%d,%d,%d,%d,%d,%d]\n", a[0],a[1],a[2],a[3],a[4],a[5],a[6],a[7]);
+void merge(int a[], int l, int m, int r)
+{
+    printf("r:%d\n",r);
+  int i, j, k;
+
+  for (i = m+1; i > l; i--)
+    aux[i-1] = a[i-1];
+  for (j = m; j < r; j++)
+    aux[r+m-j] = a[j+1];
+  for (k = l; k <= r; k++)
+    if (less(aux[j], aux[i]))
+      a[k] = aux[j--];
+    else
+      a[k] = aux[i++];
 }
 
 
