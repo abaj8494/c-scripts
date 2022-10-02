@@ -23,9 +23,9 @@ void merge(int *a, int l, int m, int r) {
             }
 
         }
-        for (int p = l; p < r; p++) {
-            a[p] = b[p];
-            printf("%d", b[p]);
+        for (int n = l; n < r; n++) {
+            a[n] = b[n];
+            printf("%d", b[n]);
         }
     }
     printf("\n");
