@@ -7,7 +7,7 @@
 void merge(int *a, int l, int m, int r) {
     int *b = malloc(sizeof(int) * (r - l));
 
-    printf("new@@@@@@@@@@@@@@@@@@@@@@@@@\n\n");
+    printf("\n\nnew@@@@@@@@@@@@@@@@@@@@@@@@@\n\n");
     printf("the array a is: [%d,%d,%d,%d,%d,%d,%d,%d]\n", a[0],a[1],a[2],a[3],a[4],a[5],a[6],a[7]);
     printf("l -> %d\nm -> %d\nr -> %d\n", l, m, r);
     int i = l, j = m + 1, k = l;
