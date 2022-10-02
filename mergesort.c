@@ -7,10 +7,6 @@
 void merge(int *a, int l, int m, int r) {
     int *b = malloc(sizeof(int) * (r - l));
 
-        for (int p = l; p < r; p++) {
-            printf("%d\n", a[p]);
-            printf("%d\n", b[p]);
-        }
     printf("r:%d",r);
     int i = l, j = m + 1, k = r;
     while (i <= m && j <= r) {
@@ -60,12 +56,10 @@ int main(int argc, char **argv) {
         a[i] = atoi(argv[j]);
     }
 
-    b = malloc(sizeof(int) * argc - 1);
-
     msort(a, 0, argc - 2);
 
     for (int i = 0; i < argc - 1; i++) {
-        printf("%d\n", b[i]);
+        printf("%d\n", a[i]);
     }
     
     return 0;
