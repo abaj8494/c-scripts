@@ -3,9 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define key(A) (A)
-#define less(A, B) (key(A) < key(B))
-
 int cmpfunc(const void * a, const void *b) {
     return ( *(int*)a - *(int*)b);
 }
