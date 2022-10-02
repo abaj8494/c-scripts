@@ -13,6 +13,6 @@ int main(int argc, char **argv) {
     int a = atoi(argv[1]), b = atoi(argv[2], c = atoi(argv[3])); 
     int d = gcd(a, b);
 
-    printf("gcd is %d\n", d);
+    printf("gcd is %d %d\n", d,c);
     
 }
