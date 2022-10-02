@@ -5,7 +5,7 @@
 
 int gcd(int a, int b) {
     int r = a % b;
-    int q = a - r / b;
+    int q = (a - r) / b;
     if (r) gcd(b, r);
     return b;
 }
