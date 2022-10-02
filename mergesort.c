@@ -28,6 +28,9 @@ void merge(int *a, int l, int m, int r) {
 
 
 void msort(int *a, int l, int r) {
+        for (int p = l; p < r; p++) {
+            printf("%d\n", a[p]);
+        }
     // l is the left index, m is the middle, r is the right.
     int m = (l + r) / 2;
     if (l < r) {
