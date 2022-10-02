@@ -9,17 +9,17 @@ int *b;
 void merge(int *a, int l, int m, int r) {
     int *b = malloc(sizeof(int) * (r - l));
 
-    int i = l; j = m + 1; k = r;
+    int i = l, j = m + 1, k = r;
     while (i < m + 1 && j < r + 1) {
         if (a[i] <= a[j]) {
             b[k++] = a[i++];
-            if (i = m + 1) {
+            if (i == m + 1) {
                 for (int p = j; p < r; p++) {b[k-j+p] = a[p];}
             }
         }
         else {
             b[k++] = a[j++];
-            if (j = r + 1) {
+            if (j == r + 1) {
                 for (int p = i; p < m; p++) {
                     b[k - i + p] = a[p];
                 }
@@ -27,7 +27,7 @@ void merge(int *a, int l, int m, int r) {
 
         }
         for (int p = l; p < r; p++) {
-            a[n] = b[n]
+            a[p] = b[p];
         }
     }
     free(b);
