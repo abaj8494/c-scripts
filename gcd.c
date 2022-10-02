@@ -4,5 +4,8 @@
 #include "gcd.h"
 
 int gcd(int a, int b) {
-    return 5;
+    int r = a % b;
+    int q = a - r / b;
+    if (r) gcd(b, r);
+    return b;
 }
