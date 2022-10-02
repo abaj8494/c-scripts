@@ -7,10 +7,10 @@
 #define key(A) (A)
 #define less(A, B) (key(A) < key(B))
 
+int aux[8];
 
 void merge(int a[], int l, int m, int r)
 {
-    int aux[8];
     printf("r:%d\n",r);
   int i, j, k;
 
@@ -23,7 +23,6 @@ void merge(int a[], int l, int m, int r)
       a[k] = aux[j--];
     else
       a[k] = aux[i++];
-  for (int i = 0; i < 8; i++) {a[i] = aux[i];}
 }
 
 
@@ -52,7 +51,7 @@ int main(int argc, char **argv) {
     msort(a, 0, argc - 2);
 
     for (int i = 0; i < argc - 1; i++) {
-        printf("%d\n", a[i]);
+        printf("%d\n", aux[i]);
     }
     
     return 0;
