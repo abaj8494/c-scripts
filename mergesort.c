@@ -34,6 +34,7 @@ void merge(int *a, int l, int m, int r) {
         }
     }
     printf("\n");
+    printf("the array a changed: [%d,%d,%d,%d,%d,%d,%d,%d]\n", a[0],a[1],a[2],a[3],a[4],a[5],a[6],a[7]);
 }
 
 
