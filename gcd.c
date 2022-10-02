@@ -8,5 +8,6 @@ int gcd(int a, int b) {
     int q = (a - r) / b;
     printf("a q b r %d %d %d %d\n",a, q, b, r);
     if (r) gcd(b, r);
+    printf("end a q b r %d %d %d %d\n",a, q, b, r);
     return b;
 }
