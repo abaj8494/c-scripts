@@ -10,9 +10,9 @@ int main(int argc, char **argv) {
         fprintf(stderr, "Usage: %s a b c\n", argv[0]);
         return  1;
     }
-    int a = atoi(argv[1]), b = atoi(argv[2], c = atoi(argv[3])); 
+    int a = atoi(argv[1]), b = atoi(argv[2]), c = atoi(argv[3]); 
     int d = gcd(a, b);
 
-    printf("gcd is %d %d\n", d,c);
+    printf("gcd is %d %d\n", d, c);
     
 }
