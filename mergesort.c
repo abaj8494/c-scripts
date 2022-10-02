@@ -31,7 +31,6 @@ void merge(int *a, int l, int m, int r) {
         }
     }
     printf("\n");
-    free(b);
 }
 
 
