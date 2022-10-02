@@ -15,7 +15,7 @@ void merge(int *a, int l, int m, int r) {
             b[k++] = a[i++];
             // if about to exit, copy the rest of the array into b
             if (i == m + 1) {
-                printf("in loop1\n");
+                printf("in loop1\nvalues of i, j, k -> %d, %d, %d\n", i, j, k);
                 for (int n = j; n < r; n++) { b[k - j + n] = a[n]; }
             }
         }
@@ -23,7 +23,7 @@ void merge(int *a, int l, int m, int r) {
             b[k++] = a[j++];
             // if about to exit, copy the rest of the array into b
             if (j == r + 1) {
-                printf("in loop2\n");
+                printf("in loop2\nvalues of i, j, k -> %d, %d, %d\n", i, j, k);
                 for (int n = i; n < m; n++) { b[k - i + n] = a[n]; }
             }
 
