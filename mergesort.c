@@ -8,7 +8,7 @@ void merge(int *a, int l, int m, int r) {
     int *b = malloc(sizeof(int) * (r - l));
 
     printf("r:%d",r);
-    int i = l, j = m + 1, k = r;
+    int i = l, j = m + 1, k = l;
     while (i <= m && j <= r) {
         if (a[i] <= a[j]) {
             b[k++] = a[i++];
