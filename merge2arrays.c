@@ -2,6 +2,7 @@
 // this forms the prototype for the merge function in the mergesort algorithm
 
 #include <stdio.h>
+#include <stdlib.h>
 
 
 int *merge(int *a, int *b) {
@@ -22,6 +23,6 @@ int main(void) {
     int a[] = {2, 3, 11, 19};
     int b[] = {4, 9, 16, 25};
 
-    c = merge(a, b);
-    for (int i = 0; i < 8; i++) {printf("%d\n"), c[i];}
+    int *c = merge(a, b);
+    for (int i = 0; i < 8; i++) {printf("%d\n", c[i]);}
 }
