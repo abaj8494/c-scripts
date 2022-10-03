@@ -14,8 +14,12 @@ int main(int argc, char **argv) {
     int d = gcd(a, b, &x, &y);
 
     // ax equiv b (mod) c => ax + by = c
-    printf("c is %d\n",c);
     if (!(d % b)) printf("no solutions\n");
+    else {
+        for (int i = 0; i < d; i++) {
+            printf("solution at %d\n", x*c/d + i*b/d);
+        }
+    }
     printf("gcd: d x y %d %d %d\n", d, x, y);
     return 0;
     
