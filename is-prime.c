@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
-#include <is-prime.h>
+#include <bool.h>
+#include "is-prime.h"
 
 bool prime(int p) {
     int n = (int) sqrt(p);
