@@ -16,5 +16,5 @@ int main(int argc, char **argv) {
         return 1;
     }
     int a = atoi(argv[1]), b = atoi(argv[2]);
-    return gcd(a, b);
+    printf("%d\n", gcd(a, b));
 }
