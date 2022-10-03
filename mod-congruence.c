@@ -13,9 +13,8 @@ int main(int argc, char **argv) {
     int a = atoi(argv[1]), b = atoi(argv[2]), m = atoi(argv[3]), x, y; 
     int d = gcd(a, m, &x, &y);
 
-    printf("d: %d\n",d);
     // ax equiv b (mod) c => ax + by = c
-    if (d % b) printf("no solutions\n");
+    if (b % d) printf("no solutions\n");
     else {
         printf("Solutions are: ");
         for (int i = 0; i < d; i++) {
