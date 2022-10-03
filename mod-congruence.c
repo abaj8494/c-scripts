@@ -12,6 +12,8 @@ int main(int argc, char **argv) {
     }
     int a = atoi(argv[1]), b = atoi(argv[2]), m = atoi(argv[3]), x, y; 
     int d = gcd(a, m, &x, &y);
+    if (x < 0) x += m;
+    x = (x * b / d) % m;
 
     // ax equiv b (mod) c => ax + by = c
     if (b % d) printf("no solutions\n");
@@ -19,8 +21,6 @@ int main(int argc, char **argv) {
         printf("Solutions are: ");
         for (int i = 0; i < d; i++) {
             printf("x = %d\n",x);
-            x = (x * b / d) % m;
-            if (x < 0) x += m;
             printf("%d ", (x + i * m/d) % m);
         }
         printf("\n");
