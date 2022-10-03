@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <is-prime.h>
+#include "is-prime.h"
 
 
 int main (int argc, char **argv) {
