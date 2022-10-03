@@ -24,7 +24,6 @@ int main(int argc, char **argv) {
         }
         printf("\n");
     }
-    printf("gcd: d x y %d %d %d\n", d, x, y);
     return 0;
     
 }
