@@ -21,7 +21,7 @@ int gcd(int a, int b, int *x, int *y)
     }
  
     int x1, y1; // To store results of recursive call
-    int gcd = gcd(b%a, a, &x1, &y1);
+    int gcd = gcd( b % a, a, &x1, &y1);
  
     // Update x and y using results of recursive
     // call
