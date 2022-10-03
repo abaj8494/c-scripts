@@ -18,7 +18,7 @@ int main(int argc, char **argv) {
     else {
         printf("Solutions are: ");
         for (int i = 0; i < d; i++) {
-            printf("x = %d",x\n);
+            printf("x = %d\n",x);
             x = (x * b / d) % m;
             if (x < 0) x += m;
             printf("%d ", (x + i * m/d) % m);
