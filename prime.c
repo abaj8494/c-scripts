@@ -7,6 +7,6 @@
 
 int main (int argc, char **argv) {
     int p = atoi(argv[1]);
-    printf("%d",is_prime(p));
+    printf(is_prime(p) ? "true\n" : "false\n");
     return 0;
 }
