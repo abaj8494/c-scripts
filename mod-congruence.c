@@ -4,14 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "gcd.h"
-
-int mod(int a, int b)
-{
-    int r = a % b;
-    return r < 0 ? r + b : r;
-}
-
-
+#include "mod.h"
 
 int main(int argc, char **argv) {
     if (argc != 4) {
@@ -24,11 +17,12 @@ int main(int argc, char **argv) {
     // ax equiv b (mod) c => ax + by = c
     if (!(d % b)) printf("no solutions\n");
     else {
+        printf("Solutions are: ");
         for (int i = 0; i < d; i++) {
             if (x < 0) x = mod(x,b);
-            printf("x is : %d\n",x);
-            printf("solution at %d\n", x*c/d + i*b/d);
+            printf("%d ", x*c/d + i*b/d);
         }
+        printf("\n");
     }
     printf("gcd: d x y %d %d %d\n", d, x, y);
     return 0;
