@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include "is-prime.h"
 
-bool prime(int p) {
+bool is_prime(int p) {
     int n = (int) sqrt(p);
     for (int i = 2; i < n; i++) {
         if ((!p % i)) return false;
