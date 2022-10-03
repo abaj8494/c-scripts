@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "gcd.h"
-#include "mod.h"
 
 int main(int argc, char **argv) {
     if (argc != 4) {
@@ -20,7 +19,7 @@ int main(int argc, char **argv) {
         printf("Solutions are: ");
         for (int i = 0; i < d; i++) {
             x = (x * b / d) % m;
-            if (x < 0) x = mod(x,m);
+            if (x < 0) x += m;
             printf("%d ", (x + i * m/d) % m);
         }
         printf("\n");
