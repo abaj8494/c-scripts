@@ -1,7 +1,7 @@
 # Raison d'être
 
-- here are some small and simple C programs that I made whilst first learning to program
-- these could be of use to someone that either wants to check another implementation of the same trivial program, or for someone that simply wants the program itself.
+- here are some C programs
+- feel free to use these as you wish
 
 # How to use
 
@@ -14,6 +14,8 @@
 
 
 # Descriptions
+
+I no longer update these descriptions.
 
 ## Baseconversion
 
@@ -93,7 +95,7 @@
 
 ## Prime
 
-- checks if a given number is prime. done iteratively.
+- counts all the primes up to a given integer argument. done iteratively.
 
 ## Quadratic
 
