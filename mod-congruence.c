@@ -5,6 +5,14 @@
 #include <stdlib.h>
 #include "gcd.h"
 
+int mod(int a, int b)
+{
+    int r = a % b;
+    return r < 0 ? r + b : r;
+}
+
+
+
 int main(int argc, char **argv) {
     if (argc != 4) {
         fprintf(stderr, "Usage: %s a b c\n", argv[0]);
@@ -17,7 +25,7 @@ int main(int argc, char **argv) {
     if (!(d % b)) printf("no solutions\n");
     else {
         for (int i = 0; i < d; i++) {
-            if (x < 0) x %= b;
+            if (x < 0) x = mod(x,b);
             printf("x is : %d\n",x);
             printf("solution at %d\n", x*c/d + i*b/d);
         }
