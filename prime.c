@@ -3,10 +3,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <prime.h>
+
+bool prime(int p) {
+    int n = (int) sqrt(p);
+    for (int i = 2; i < n; i++) {
+        if ((!p % i)) return false;
+    }
+}
 
 int main (int argc, char **argv) {
     int p = atoi(argv[1]);
-    int max = (int) sqrt(p);
-    printf("p max : %d %d", p, max);
+    printf("%d",prime(p));
     return 0;
 }
