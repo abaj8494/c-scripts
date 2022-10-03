@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "gcd.h"
+#include "gcd_ext.h"
 
 int main(int argc, char **argv) {
     if (argc != 4) {
@@ -11,7 +11,7 @@ int main(int argc, char **argv) {
         return  1;
     }
     int a = atoi(argv[1]), b = atoi(argv[2]), m = atoi(argv[3]), x, y; 
-    int d = gcd(a, m, &x, &y);
+    int d = gcd_ext(a, m, &x, &y);
     x = (x * b / d) % m;
     if (x < 0) x += m;
 
