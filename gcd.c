@@ -1,32 +1,18 @@
 // contains a recursive implementation of euclids algorithm which returns the gcd of 2 numbers
 
 #include <stdio.h>
-#include "gcd.h"
 
-/* this is the simple algorithm
 int gcd(int a, int b) {
     if (!b) return a;
     return gcd(b, a % b);
 }
-*/
 
-int gcd(int a, int b, int *x, int *y)
-{
-    // Base Case
-    if (a == 0)
-    {
-        *x = 0;
-        *y = 1;
-        return b;
+
+int main(int argc, char **argv) {
+    if (argc != 3) {
+        fprintf(stderr, "Usage: %s a b\n", argv[0]);
+        return 1;
     }
- 
-    int x1, y1; // To store results of recursive call
-    int gcd_ret = gcd( b % a, a, &x1, &y1);
- 
-    // Update x and y using results of recursive
-    // call
-    *x = y1 - (b/a) * x1;
-    *y = x1;
- 
-    return gcd_ret;
+    int a = atoi(argv[1]), b = atoi(argv[2]);
+    return gcd(a, b);
 }
