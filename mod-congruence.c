@@ -11,7 +11,7 @@ int main(int argc, char **argv) {
         fprintf(stderr, "Usage: %s a b c\n", argv[0]);
         return  1;
     }
-    int a = atoi(argv[1]), b = atoi(argv[2]), c = atoi(argv[3]), x, y; 
+    int a = atoi(argv[1]), b = atoi(argv[3]), c = atoi(argv[2]), x, y; 
     int d = gcd(a, b, &x, &y);
 
     // ax equiv b (mod) c => ax + by = c
