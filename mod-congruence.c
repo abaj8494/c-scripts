@@ -17,6 +17,8 @@ int main(int argc, char **argv) {
     if (!(d % b)) printf("no solutions\n");
     else {
         for (int i = 0; i < d; i++) {
+            if (x < 0) x %= c;
+            printf("x is : %d\n",x);
             printf("solution at %d\n", x*c/d + i*b/d);
         }
     }
