@@ -12,7 +12,7 @@ int gcd_ext(int a, int b, int *x, int *y)
     }
  
     int x1, y1; // To store results of recursive call
-    int gcd_ret = gcd( b % a, a, &x1, &y1);
+    int gcd_ret = gcd_ext( b % a, a, &x1, &y1);
  
     // Update x and y using results of recursive
     // call
