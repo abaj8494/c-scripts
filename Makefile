@@ -1,6 +1,15 @@
-SOURCES = $(wildcard *.c)
-EXECS = $(SOURCES:%.c=%)
-CFLAGS = 
-BINDIR = /.local/bin/c
+CC=gcc
+CFLAGS=-lm
 
-all: $(EXECS)
+SRCS=$(wildcard *.c)
+BINS=$(patsubst %.c,%,$(SRCS))
+
+.PHONY: all clean
+
+all: $(BINS)
+
+%: %.c
+		$(CC) $(CFLAGS) $< -o $(HOME)/.local/bin/c/$@
+
+clean:
+		rm -f $(BINS)
