@@ -8,11 +8,18 @@
 
 void print_bits_unsigned(uint8_t b, int i)
 {
-    printf("unsigned");
+    int count = b * sizeof(i);
+    while (count > 0) {
+        printf("%d", (i >> --count) & 1);
+    }
 }
 
 void print_bits_signed(uint8_t b, int i)
 {
+    int count = b * sizeof(i);
+    while (count > 0) {
+        printf("%d", (i >> count--) & 1);
+    }
     printf("signed");
 }
 
